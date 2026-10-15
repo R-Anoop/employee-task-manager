@@ -1,0 +1,45 @@
+### Create an employee
+POST http://localhost:8080/api/employees
+Content-Type: application/json
+
+{
+  "name": "Rahul Sharma",
+  "email": "rahul.sharma@example.com",
+  "department": "Engineering"
+}
+### Get all employees
+GET http://localhost:8080/api/employees
+Accept: application/json
+### Create a task
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Implement Employee API",
+  "description": "Complete and test employee management endpoints",
+  "status": "TODO",
+  "assignedEmployeeId": 1
+}
+### Get all tasks
+GET http://localhost:8080/api/tasks
+Accept: application/json
+
+### Get task by ID
+GET http://localhost:8080/api/tasks/1
+Accept: application/json
+### Update task status
+PATCH http://localhost:8080/api/tasks/1/status
+Content-Type: application/json
+
+{
+  "status": "IN_PROGRESS"
+}
+### Assign task to employee
+PUT http://localhost:8080/api/tasks/1/assignment
+Content-Type: application/json
+
+{
+  "employeeId": 1
+}
+### Delete task
+DELETE http://localhost:8080/api/tasks/1
